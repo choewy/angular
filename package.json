@@ -11,6 +11,7 @@
     "build:document": "npx @compodoc/compodoc -p tsconfig.json",
     "format": "prettier --write \"apps/**/*.ts\" \"libs/**/*.ts\"",
     "start": "nest start",
+    "start:init": "rm -rf ./dist && npm run start:dev",
     "start:dev": "NODE_ENV=local nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/apps/nestjs-mono-repo/main",
@@ -27,6 +28,7 @@
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
     "@nestjs/serve-static": "^3.0.0",
+    "@nestjs/swagger": "^6.1.4",
     "@nestjs/typeorm": "^9.0.1",
     "@types/luxon": "^3.2.0",
     "class-transformer": "^0.5.1",
@@ -36,6 +38,7 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",
+    "swagger-ui-express": "^4.6.0",
     "typeorm": "^0.3.11",
     "typeorm-naming-strategy": "^2.0.0"
   },
