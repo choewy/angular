@@ -59,6 +59,13 @@ export class Account {
   })
   refreshToken: string | null;
 
+  @Column({
+    type: 'tinyint',
+    unsigned: true,
+    comment: '적용 여부',
+  })
+  isApply: boolean;
+
   @DateTimeColumn({
     update: false,
     comment: '가입일시',
