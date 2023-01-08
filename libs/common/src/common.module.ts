@@ -1,5 +1,5 @@
 import { SchemaModule } from '@app/schema';
-import { Module } from '@nestjs/common';
+import { Logger, Module } from '@nestjs/common';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { CommonController } from './common.controller';
 
@@ -11,5 +11,7 @@ import { CommonController } from './common.controller';
     SchemaModule,
   ],
   controllers: [CommonController],
+  providers: [Logger],
+  exports: [Logger],
 })
 export class CommonModule {}
